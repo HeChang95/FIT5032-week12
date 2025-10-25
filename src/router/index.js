@@ -10,48 +10,19 @@ import CountBookAPI from '../views/CountBookAPI.vue'
 import GetAllBookAPI from '../views/GetAllBookAPI.vue';
 
 const routes = [
-  {
-    path: '/addbook',
-    name: 'AddBook',
-    component: AddBookView
-  },
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: AboutView
-  },
-  {
-    path: '/FireLogin',
-    name: 'FireLogin',
-    component: FirebaseSigninView
-
-  },
-  { path: '/FireRegister',
-    name: 'FireRegister',
-    component: FirebaseRegisterView
-  },
-   {
-    path: '/GetBookCount',
-    name: 'GetBookCount',
-    component: GetBookCountView,
-  },
+  { path: '/addbook', name: 'AddBook', component: AddBookView },
+  { path: '/', name: 'home', component: HomeView },
+  { path: '/about', name: 'about', component: AboutView },
+  { path: '/FireLogin', name: 'FireLogin', component: FirebaseSigninView },
+  { path: '/FireRegister', name: 'FireRegister', component: FirebaseRegisterView },
+  { path: '/GetBookCount', name: 'GetBookCount', component: GetBookCountView },
   { path: '/weather', name: 'GetWeather', component: WeatherView },
-  {
-    path: '/CountBookAPI',
-    name: 'CountBookAPI',
-    component: CountBookAPI,
-  },
+  { path: '/CountBookAPI', name: 'CountBookAPI', component: CountBookAPI },
   { path: '/GetAllBookAPI', name: 'GetAllBookAPI', component: GetAllBookAPI },
 ]
 
-
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 
